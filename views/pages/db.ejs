@@ -2,12 +2,7 @@
 <html>
 <head>
   <% include ../partials/header.ejs %>
-</head>
 
-<body>
-
-<div class="container">
-  <!-- Styles -->
   <style>
   #chartdiv {
     width: 100%;
@@ -89,8 +84,15 @@
   chart.cursor.lineY.disabled = true;
   </script>
 
+</head>
+
+<body>
+
+<div class="container">
+  <!-- Styles -->
+
   <!-- HTML -->
-  <div id="chartdiv"></div>	
+  <div id="chartdiv"></div>
 
     <%= data %>
 
