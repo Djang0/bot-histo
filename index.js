@@ -22,7 +22,7 @@ var app = express()
     request('https://lreenaers.ddns.net:8443/NoQTpyQstWqBIoUgRdBsgIWCu', function(error, response, body) {
       const data=JSON.parse(body);
       console.log(data);
-      const results = {};
+      const results = {data : data};
       res.render('pages/db', results );
     });
 
