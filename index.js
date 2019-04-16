@@ -14,7 +14,7 @@ var app = express()
   .use(bodyParser.json())
   .use(bodyParser.urlencoded({
     extended: true
-  }))
+  })
   .use(express.static(path.join(__dirname, 'public')))
   .get('/', async (req, res) {
     request("https://lreenaers.ddns.net:8443/UZeLvHozfhwsL53eoAjetEYv", function(error, response, body) {
