@@ -4,7 +4,7 @@ const express = require('express')
 const path = require('path')
 var bodyParser = require('body-parser');
 var moment = require('moment');
-
+const PORT = process.env.PORT || 5000
 //https://lreenaers.ddns.net:8443/UZeLvHozfhwsL53eoAjetEYv
 var welcome = function(req, res) {
   res.json({});
