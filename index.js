@@ -22,7 +22,8 @@ var app = express()
     request('https://lreenaers.ddns.net:8443/NoQTpyQstWqBIoUgRdBsgIWCu', function(error, response, body) {
       const data=JSON.parse(body);
       console.log(data);
-      res.render('pages/db', data );
+      const results = {};
+      res.render('pages/db', results );
     });
 
   })
