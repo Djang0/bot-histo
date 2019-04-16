@@ -24,6 +24,4 @@ var app = express()
       }
     });
 
-  });
-
 https.createServer(credentials, app).listen(PORT, () => console.log(`Listening on ${ PORT }`));
