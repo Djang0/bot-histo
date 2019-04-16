@@ -21,6 +21,7 @@ var app = express()
   .get('/',  async (req, res) => {
     request('https://lreenaers.ddns.net:8443/NoQTpyQstWqBIoUgRdBsgIWCu', function(error, response, body) {
       const data=JSON.parse(body);
+      console.log(data);
       res.render('pages/db', data );
     });
 
