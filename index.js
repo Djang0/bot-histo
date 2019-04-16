@@ -18,5 +18,11 @@ var app = express()
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
-  .get('/', welcome)
+  .get('/',  async (req, res) => {
+    request('https://lreenaers.ddns.net:8443/NoQTpyQstWqBIoUgRdBsgIWCu', function(error, response, body) {
+      var data=JSON.parse(body);
+      res.render('pages/db', data );
+    });
+
+  })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`));
