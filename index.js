@@ -20,7 +20,7 @@ var app = express()
   .set('view engine', 'ejs')
   .get('/',  async (req, res) => {
     request('https://lreenaers.ddns.net:8443/NoQTpyQstWqBIoUgRdBsgIWCu', function(error, response, body) {
-      var data=JSON.parse(body);
+      const data=JSON.parse(body);
       res.render('pages/db', data );
     });
 
