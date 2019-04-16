@@ -18,6 +18,5 @@ var app = express()
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
-  .get('/', welcome);
-
-https.createServer(credentials, app).listen(PORT, () => console.log(`Listening on ${ PORT }`));
+  .get('/', welcome)
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`));
