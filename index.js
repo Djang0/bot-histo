@@ -14,14 +14,19 @@ var app = express()
   .use(bodyParser.json())
   .use(bodyParser.urlencoded({
     extended: true
-  })
+  }))
   .use(express.static(path.join(__dirname, 'public')))
+  .set('views', path.join(__dirname, 'views'))
+  .set('view engine', 'ejs')
   .get('/', async (req, res) {
-    request("https://lreenaers.ddns.net:8443/UZeLvHozfhwsL53eoAjetEYv", function(error, response, body) {
-      if (!error && response.statusCode == 200) {
-        data = JSON.parse(body) // Print the google web page.
+    request("https://lreenaers.ddns.net:8443/UZeLvHozfhwsL53eoAjetEYv",
+      function(error, response, body) {
+        data={};
+        if (!error && response.statusCode == 200) {
+          data = JSON.parse(body); // Print the google web page.
+        }
         res.render('pages/db', data);
-      }
+      });
     });
 
 https.createServer(credentials, app).listen(PORT, () => console.log(`Listening on ${ PORT }`));
