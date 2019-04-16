@@ -31,17 +31,16 @@
 
     <script>
     // Themes begin
-    am4core.useTheme(am4themes_dataviz);
     am4core.useTheme(am4themes_animated);
     // Themes end
 
     // Create chart instance
     var chart = am4core.create("chartdiv", am4charts.RadarChart);
-    chart.scrollbarX = new am4core.Scrollbar();
+    //chart.scrollbarX = new am4core.Scrollbar();
 
     var data = [];
 
-    for(var i = 0; i < 20; i++){
+    for(var i = 0; i < 200; i++){
       data.push({category: i, value:Math.round(Math.random() * 100)});
     }
 
