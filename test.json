@@ -1,0 +1,819 @@
+{
+    "flyable": [
+        {
+            "message_id": 3155,
+            "from": {
+                "id": 580703241,
+                "is_bot": false,
+                "first_name": "Ludovic",
+                "last_name": "Reenaers",
+                "language_code": "fr"
+            },
+            "chat": {
+                "id": 580703241,
+                "first_name": "Ludovic",
+                "last_name": "Reenaers",
+                "type": "private"
+            },
+            "date": 1555071142,
+            "text": "/flyable",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 8,
+                    "type": "bot_command"
+                }
+            ]
+        },
+        {
+            "message_id": 3157,
+            "from": {
+                "id": 580703241,
+                "is_bot": false,
+                "first_name": "Ludovic",
+                "last_name": "Reenaers",
+                "language_code": "fr"
+            },
+            "chat": {
+                "id": 580703241,
+                "first_name": "Ludovic",
+                "last_name": "Reenaers",
+                "type": "private"
+            },
+            "date": 1555071156,
+            "text": "/flyable",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 8,
+                    "type": "bot_command"
+                }
+            ]
+        },
+        {
+            "message_id": 3159,
+            "from": {
+                "id": 580703241,
+                "is_bot": false,
+                "first_name": "Ludovic",
+                "last_name": "Reenaers",
+                "language_code": "fr"
+            },
+            "chat": {
+                "id": 580703241,
+                "first_name": "Ludovic",
+                "last_name": "Reenaers",
+                "type": "private"
+            },
+            "date": 1555084618,
+            "text": "/flyable",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 8,
+                    "type": "bot_command"
+                }
+            ]
+        },
+        {
+            "message_id": 3206,
+            "from": {
+                "id": 669511813,
+                "is_bot": false,
+                "first_name": "Pierre",
+                "last_name": "Goosse",
+                "language_code": "fr"
+            },
+            "chat": {
+                "id": 669511813,
+                "first_name": "Pierre",
+                "last_name": "Goosse",
+                "type": "private"
+            },
+            "date": 1555139610,
+            "text": "/flyable",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 8,
+                    "type": "bot_command"
+                }
+            ]
+        },
+        {
+            "message_id": 3287,
+            "from": {
+                "id": 669511813,
+                "is_bot": false,
+                "first_name": "Pierre",
+                "last_name": "Goosse",
+                "language_code": "fr"
+            },
+            "chat": {
+                "id": 669511813,
+                "first_name": "Pierre",
+                "last_name": "Goosse",
+                "type": "private"
+            },
+            "date": 1555220845,
+            "text": "/flyable",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 8,
+                    "type": "bot_command"
+                }
+            ]
+        },
+        {
+            "message_id": 3295,
+            "from": {
+                "id": 704458546,
+                "is_bot": false,
+                "first_name": "Laurent",
+                "last_name": "S",
+                "language_code": "fr"
+            },
+            "chat": {
+                "id": 704458546,
+                "first_name": "Laurent",
+                "last_name": "S",
+                "type": "private"
+            },
+            "date": 1555225660,
+            "text": "/flyable",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 8,
+                    "type": "bot_command"
+                }
+            ]
+        },
+        {
+            "message_id": 3313,
+            "from": {
+                "id": 669511813,
+                "is_bot": false,
+                "first_name": "Pierre",
+                "last_name": "Goosse",
+                "language_code": "fr"
+            },
+            "chat": {
+                "id": 669511813,
+                "first_name": "Pierre",
+                "last_name": "Goosse",
+                "type": "private"
+            },
+            "date": 1555233250,
+            "text": "/flyable",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 8,
+                    "type": "bot_command"
+                }
+            ]
+        },
+        {
+            "message_id": 3321,
+            "from": {
+                "id": 669511813,
+                "is_bot": false,
+                "first_name": "Pierre",
+                "last_name": "Goosse",
+                "language_code": "fr"
+            },
+            "chat": {
+                "id": 669511813,
+                "first_name": "Pierre",
+                "last_name": "Goosse",
+                "type": "private"
+            },
+            "date": 1555236735,
+            "text": "/flyable",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 8,
+                    "type": "bot_command"
+                }
+            ]
+        },
+        {
+            "message_id": 3336,
+            "from": {
+                "id": 704458546,
+                "is_bot": false,
+                "first_name": "Laurent",
+                "last_name": "S",
+                "language_code": "fr"
+            },
+            "chat": {
+                "id": 704458546,
+                "first_name": "Laurent",
+                "last_name": "S",
+                "type": "private"
+            },
+            "date": 1555237186,
+            "text": "/flyable",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 8,
+                    "type": "bot_command"
+                }
+            ]
+        },
+        {
+            "message_id": 3342,
+            "from": {
+                "id": 643594160,
+                "is_bot": false,
+                "first_name": "Vivi",
+                "last_name": "Balot",
+                "language_code": "fr"
+            },
+            "chat": {
+                "id": 643594160,
+                "first_name": "Vivi",
+                "last_name": "Balot",
+                "type": "private"
+            },
+            "date": 1555242402,
+            "text": "/flyable",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 8,
+                    "type": "bot_command"
+                }
+            ]
+        },
+        {
+            "message_id": 3393,
+            "from": {
+                "id": 704458546,
+                "is_bot": false,
+                "first_name": "Laurent",
+                "last_name": "S",
+                "language_code": "fr"
+            },
+            "chat": {
+                "id": 704458546,
+                "first_name": "Laurent",
+                "last_name": "S",
+                "type": "private"
+            },
+            "date": 1555311338,
+            "text": "/flyable",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 8,
+                    "type": "bot_command"
+                }
+            ]
+        },
+        {
+            "message_id": 3397,
+            "from": {
+                "id": 704458546,
+                "is_bot": false,
+                "first_name": "Laurent",
+                "last_name": "S",
+                "language_code": "fr"
+            },
+            "chat": {
+                "id": 704458546,
+                "first_name": "Laurent",
+                "last_name": "S",
+                "type": "private"
+            },
+            "date": 1555316302,
+            "text": "/flyable",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 8,
+                    "type": "bot_command"
+                }
+            ]
+        },
+        {
+            "message_id": 3429,
+            "from": {
+                "id": 580703241,
+                "is_bot": false,
+                "first_name": "Ludovic",
+                "last_name": "Reenaers",
+                "language_code": "fr"
+            },
+            "chat": {
+                "id": 580703241,
+                "first_name": "Ludovic",
+                "last_name": "Reenaers",
+                "type": "private"
+            },
+            "date": 1555327724,
+            "text": "/flyable",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 8,
+                    "type": "bot_command"
+                }
+            ]
+        },
+        {
+            "message_id": 3431,
+            "from": {
+                "id": 669511813,
+                "is_bot": false,
+                "first_name": "Pierre",
+                "last_name": "Goosse",
+                "language_code": "fr"
+            },
+            "chat": {
+                "id": 669511813,
+                "first_name": "Pierre",
+                "last_name": "Goosse",
+                "type": "private"
+            },
+            "date": 1555392322,
+            "text": "/flyable",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 8,
+                    "type": "bot_command"
+                }
+            ]
+        },
+        {
+            "message_id": 3433,
+            "from": {
+                "id": 669511813,
+                "is_bot": false,
+                "first_name": "Pierre",
+                "last_name": "Goosse",
+                "language_code": "fr"
+            },
+            "chat": {
+                "id": 669511813,
+                "first_name": "Pierre",
+                "last_name": "Goosse",
+                "type": "private"
+            },
+            "date": 1555392324,
+            "text": "/flyable",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 8,
+                    "type": "bot_command"
+                }
+            ]
+        },
+        {
+            "message_id": 3439,
+            "from": {
+                "id": 704458546,
+                "is_bot": false,
+                "first_name": "Laurent",
+                "last_name": "S",
+                "language_code": "fr"
+            },
+            "chat": {
+                "id": 704458546,
+                "first_name": "Laurent",
+                "last_name": "S",
+                "type": "private"
+            },
+            "date": 1555397540,
+            "text": "/flyable",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 8,
+                    "type": "bot_command"
+                }
+            ]
+        }
+    ],
+    "xcable": [],
+    "sites": [
+        {
+            "message_id": 3498,
+            "from": {
+                "id": 180808226,
+                "is_bot": false,
+                "first_name": "Rik",
+                "last_name": "De Mey",
+                "username": "Rik_De_Mey",
+                "language_code": "nl"
+            },
+            "chat": {
+                "id": 180808226,
+                "first_name": "Rik",
+                "last_name": "De Mey",
+                "username": "Rik_De_Mey",
+                "type": "private"
+            },
+            "date": 1555418289,
+            "text": "/sites",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 6,
+                    "type": "bot_command"
+                }
+            ]
+        }
+    ],
+    "help": [],
+    "oa": [
+        {
+            "message_id": 3226,
+            "from": {
+                "id": 580703241,
+                "is_bot": false,
+                "first_name": "Ludovic",
+                "last_name": "Reenaers",
+                "language_code": "fr"
+            },
+            "chat": {
+                "id": 580703241,
+                "first_name": "Ludovic",
+                "last_name": "Reenaers",
+                "type": "private"
+            },
+            "date": 1555143424,
+            "text": "/oa",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 3,
+                    "type": "bot_command"
+                }
+            ]
+        },
+        {
+            "message_id": 3299,
+            "from": {
+                "id": 490943041,
+                "is_bot": false,
+                "first_name": "lode",
+                "last_name": "spruyt",
+                "language_code": "en"
+            },
+            "chat": {
+                "id": 490943041,
+                "first_name": "lode",
+                "last_name": "spruyt",
+                "type": "private"
+            },
+            "date": 1555227370,
+            "text": "/oa",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 3,
+                    "type": "bot_command"
+                }
+            ]
+        },
+        {
+            "message_id": 3325,
+            "from": {
+                "id": 704458546,
+                "is_bot": false,
+                "first_name": "Laurent",
+                "last_name": "S",
+                "language_code": "fr"
+            },
+            "chat": {
+                "id": 704458546,
+                "first_name": "Laurent",
+                "last_name": "S",
+                "type": "private"
+            },
+            "date": 1555237175,
+            "text": "/oa",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 3,
+                    "type": "bot_command"
+                }
+            ]
+        }
+    ],
+    "golf": [
+        {
+            "message_id": 3237,
+            "from": {
+                "id": 580703241,
+                "is_bot": false,
+                "first_name": "Ludovic",
+                "last_name": "Reenaers",
+                "language_code": "fr"
+            },
+            "chat": {
+                "id": 580703241,
+                "first_name": "Ludovic",
+                "last_name": "Reenaers",
+                "type": "private"
+            },
+            "date": 1555143465,
+            "text": "/golf",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 5,
+                    "type": "bot_command"
+                }
+            ]
+        },
+        {
+            "message_id": 3297,
+            "from": {
+                "id": 490943041,
+                "is_bot": false,
+                "first_name": "lode",
+                "last_name": "spruyt",
+                "language_code": "en"
+            },
+            "chat": {
+                "id": 490943041,
+                "first_name": "lode",
+                "last_name": "spruyt",
+                "type": "private"
+            },
+            "date": 1555227351,
+            "text": "/golf",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 5,
+                    "type": "bot_command"
+                }
+            ]
+        },
+        {
+            "message_id": 3319,
+            "from": {
+                "id": 722114185,
+                "is_bot": false,
+                "first_name": "Christian",
+                "last_name": "C",
+                "language_code": "fr"
+            },
+            "chat": {
+                "id": 722114185,
+                "first_name": "Christian",
+                "last_name": "C",
+                "type": "private"
+            },
+            "date": 1555235009,
+            "text": "/golf",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 5,
+                    "type": "bot_command"
+                }
+            ]
+        },
+        {
+            "message_id": 3323,
+            "from": {
+                "id": 704458546,
+                "is_bot": false,
+                "first_name": "Laurent",
+                "last_name": "S",
+                "language_code": "fr"
+            },
+            "chat": {
+                "id": 704458546,
+                "first_name": "Laurent",
+                "last_name": "S",
+                "type": "private"
+            },
+            "date": 1555237156,
+            "text": "/golf",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 5,
+                    "type": "bot_command"
+                }
+            ]
+        },
+        {
+            "message_id": 3340,
+            "from": {
+                "id": 643594160,
+                "is_bot": false,
+                "first_name": "Vivi",
+                "last_name": "Balot",
+                "language_code": "fr"
+            },
+            "chat": {
+                "id": 643594160,
+                "first_name": "Vivi",
+                "last_name": "Balot",
+                "type": "private"
+            },
+            "date": 1555242368,
+            "text": "/golf",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 5,
+                    "type": "bot_command"
+                }
+            ]
+        }
+    ],
+    "father": [
+        {
+            "message_id": 3311,
+            "from": {
+                "id": 490943041,
+                "is_bot": false,
+                "first_name": "lode",
+                "last_name": "spruyt",
+                "language_code": "en"
+            },
+            "chat": {
+                "id": 490943041,
+                "first_name": "lode",
+                "last_name": "spruyt",
+                "type": "private"
+            },
+            "date": 1555227396,
+            "text": "/father",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 7,
+                    "type": "bot_command"
+                }
+            ]
+        }
+    ],
+    "paymeabeer": [],
+    "meteo": [
+        {
+            "message_id": 3161,
+            "from": {
+                "id": 580703241,
+                "is_bot": false,
+                "first_name": "Ludovic",
+                "last_name": "Reenaers",
+                "language_code": "fr"
+            },
+            "chat": {
+                "id": 580703241,
+                "first_name": "Ludovic",
+                "last_name": "Reenaers",
+                "type": "private"
+            },
+            "date": 1555084636,
+            "text": "/meteo",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 6,
+                    "type": "bot_command"
+                }
+            ]
+        },
+        {
+            "message_id": 3165,
+            "from": {
+                "id": 580703241,
+                "is_bot": false,
+                "first_name": "Ludovic",
+                "last_name": "Reenaers",
+                "language_code": "fr"
+            },
+            "chat": {
+                "id": 580703241,
+                "first_name": "Ludovic",
+                "last_name": "Reenaers",
+                "type": "private"
+            },
+            "date": 1555084680,
+            "text": "/meteo",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 6,
+                    "type": "bot_command"
+                }
+            ]
+        },
+        {
+            "message_id": 3169,
+            "from": {
+                "id": 580703241,
+                "is_bot": false,
+                "first_name": "Ludovic",
+                "last_name": "Reenaers",
+                "language_code": "fr"
+            },
+            "chat": {
+                "id": 580703241,
+                "first_name": "Ludovic",
+                "last_name": "Reenaers",
+                "type": "private"
+            },
+            "date": 1555084708,
+            "text": "/meteo",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 6,
+                    "type": "bot_command"
+                }
+            ]
+        },
+        {
+            "message_id": 3242,
+            "from": {
+                "id": 722114185,
+                "is_bot": false,
+                "first_name": "Christian",
+                "last_name": "C",
+                "language_code": "fr"
+            },
+            "chat": {
+                "id": 722114185,
+                "first_name": "Christian",
+                "last_name": "C",
+                "type": "private"
+            },
+            "date": 1555174971,
+            "text": "/meteo",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 6,
+                    "type": "bot_command"
+                }
+            ]
+        },
+        {
+            "message_id": 3315,
+            "from": {
+                "id": 722114185,
+                "is_bot": false,
+                "first_name": "Christian",
+                "last_name": "C",
+                "language_code": "fr"
+            },
+            "chat": {
+                "id": 722114185,
+                "first_name": "Christian",
+                "last_name": "C",
+                "type": "private"
+            },
+            "date": 1555234975,
+            "text": "/meteo",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 6,
+                    "type": "bot_command"
+                }
+            ]
+        },
+        {
+            "message_id": 3435,
+            "from": {
+                "id": 704458546,
+                "is_bot": false,
+                "first_name": "Laurent",
+                "last_name": "S",
+                "language_code": "fr"
+            },
+            "chat": {
+                "id": 704458546,
+                "first_name": "Laurent",
+                "last_name": "S",
+                "type": "private"
+            },
+            "date": 1555397497,
+            "text": "/meteo",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 6,
+                    "type": "bot_command"
+                }
+            ]
+        }
+    ]
+}
