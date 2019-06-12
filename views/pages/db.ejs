@@ -220,7 +220,7 @@
       tbody_str = ""
 
       <% Object.keys(users).forEach(function(usr){ %>
-      tbody_str += "<tr><td><a href='/img/mr_airspaces.png'><%= users[usr].name %></a></td><td><%= users[usr].lang %></td><td><%= users[usr].req_count %></td></tr>";
+      tbody_str += "<tr><td><a href='/user/<%= usr %>'><%= users[usr].name %></a></td><td><%= users[usr].lang %></td><td><%= users[usr].req_count %></td></tr>";
       <% }); %>
       console.log(tbody_str);
       $("#tab_body").html(tbody_str);

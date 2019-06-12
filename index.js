@@ -31,7 +31,21 @@ var app = express()
 
 
       res.render('pages/db', {data:data, moment : moment});
-    });
+    })
+    .get('/user/:id', async (req, res) => {
+      request('https://lreenaers.ddns.net:8443/UZeLvHozfhwsL53eoAjetEYv', function(error, response, body) {
+        var data = JSON.parse(body);
+
+        // for (var key in data) {
+        //   if (data.hasOwnProperty(key)) {
+        //     var val = data[key];
+        //     per_command.ls.push({category: key, value: val.length});
+        //   }
+        // }
+
+
+        res.render('pages/usr', {data:data, moment : moment, usr_id:req.id});
+      });
 
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`));
