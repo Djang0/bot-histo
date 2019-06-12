@@ -24,7 +24,7 @@ var app = express()
       res.render('pages/db', {data:data, moment : moment});
     })})
     .get('/user/:id', async (req, res) => {
-      var param_usr_id = req.id;
+      var param_usr_id = req.params.id;
       request('https://lreenaers.ddns.net:8443/UZeLvHozfhwsL53eoAjetEYv', function(error, response, body) {
         var data = JSON.parse(body);
 
