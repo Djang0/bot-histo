@@ -35,6 +35,385 @@
 
   <div class="container">
     hello <%= usr_id %>
+    <!-- HTML -->
+    <div class="row">
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Data collected since</div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800" id="dt_from"></div>
+              </div>
+              <div class="col-auto">
+                <i class="far fa-calendar-check fa-2x text-gray-300"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-success shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Users count</div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800" id="usr_count"></div>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-users fa-2x text-gray-300"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-info shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Languages count</div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800" id="lng_count"></div>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-language fa-2x text-gray-300"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-warning shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Requests count</div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800" id="req_count"></div>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-hands-helping fa-2x text-gray-300"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+
+        <div class="card shadow" style="width: 100%;">
+          <div class="card-body">
+            <h5 class="card-title">Request frequency</h5>
+            <div id="reg_pop"></div>
+          </div>
+        </div>
+
+
+    </div>
+    <div class="row">
+
+        <div class="card shadow" style="width: 100%;">
+          <div class="card-body" style="margin-bottom: 0;">
+            <h5 class="card-title">Command popularity</h5>
+            <div id="comm_pop"></div>
+          </div>
+        </div>
+
+
+        <div class="card shadow" style="width: 100%;">
+          <div class="card-body">
+            <h5 class="card-title">Week days popularity</h5>
+            <div id="day_pop"></div>
+          </div>
+        </div>
+        <div class="card shadow" style="width: 100%;">
+          <div class="card-body">
+            <h5 class="card-title">Languages popularity</h5>
+            <div id="lng_pop"></div>
+          </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="card shadow" style="width: 100%;">
+          <div class="card-body">
+            <h5 class="card-title">Top users</h5>
+            <table id="example" class="table table-striped table-bordered" style="width:100%">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Language</th>
+                  <th>Requests</th>
+                </tr>
+              </thead>
+              <tbody id="tab_body">
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+    </div>
+    <script>
+      // Themes begin
+      am4core.useTheme(am4themes_animated);
+      // Themes end
+
+      // Create chart instance
+      var chart = am4core.create("comm_pop", am4charts.RadarChart);
+      //chart.scrollbarX = new am4core.Scrollbar();
+
+      var dataa = [];
+      <% var dates =[]; %>
+      <% var users ={}; %>
+      <% var langs ={}; %>
+      <% var reqs ={}; %>
+      <% var days ={}; %>
+      <% Object.keys(data).forEach(function(key){ %>
+      dataa.push({
+        category: "/<%= key %>",
+        value: <%= data[key].length %>
+      })
+      <%  data[key].forEach(function(msg){ %>
+        //
+        <%    if (msg.from.id== usr_id) { %>
+      <%    if (users.hasOwnProperty(msg.from.id)) { %>
+      <%      users[msg.from.id].req_count +=1; %>
+      <%    } else{%>
+        <%    var name =""; %>
+        <%    if (msg.from.hasOwnProperty("first_name")) { %>
+          <%      name +=msg.from.first_name+" "; %>
+        <%    } %>
+        <%    if (msg.from.hasOwnProperty("last_name")) { %>
+          <%    name +=msg.from.last_name; %>
+        <%    } %>
+        <%    if (name=="") { %>
+          <%    name ="Anonymous"; %>
+        <%    } %>
+      <%      users[msg.from.id] = {name : name, req_count : 1, lang:msg.from.language_code} %>
+      <%    } %>
+
+      <%  day_str = moment(msg.date*1000).format('dddd') %>
+      <%  if (days.hasOwnProperty(day_str)) { %>
+      <%    days[day_str].count +=1; %>
+      <%  } else{ %>
+      <%    days[day_str] = {count : 1} %>
+      <%  } %>
+      <%  dt_str = moment(msg.date*1000).format('YYYY-MM-DD') %>
+      <%  if (reqs.hasOwnProperty(dt_str)) { %>
+      <%    reqs[dt_str].count +=1; %>
+      <%  } else{%>
+      <%    reqs[dt_str] = {count : 1} %>
+      <%  } %>
+      <%  if (langs.hasOwnProperty(msg.from.language_code)) { %>
+      <%    langs[msg.from.language_code].count +=1; %>
+      <%  } else{%>
+      <%    langs[msg.from.language_code] = {count : 1} %>
+      <%  } %>
+      <%= dates.push( moment(msg.date*1000)) %>;
+      <% } %>//end filter user
+      <% }); %>//end data[key]
+      <% }); %>//end keys
+      //alert("");
+      tbody_str = ""
+
+      <% Object.keys(users).forEach(function(usr){ %>
+      tbody_str += "<tr><td><a href='/user/<%= usr %>'><%= users[usr].name %></a></td><td><%= users[usr].lang %></td><td><%= users[usr].req_count %></td></tr>";
+      <% }); %>
+      console.log(tbody_str);
+      $("#tab_body").html(tbody_str);
+      $("#dt_from").html("<%= moment.min(dates).format('YYYY-MM-DD') %>");
+      $("#usr_count").html("<%= Object.keys(users).length %>");
+      $("#lng_count").html("<%= Object.keys(langs).length %>");
+      $("#req_count").html("<%= Object.keys(dates).length %>");
+      chart.data = dataa;
+      chart.radius = am4core.percent(100);
+      chart.innerRadius = am4core.percent(50);
+
+      // Create axes
+      var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+      categoryAxis.dataFields.category = "category";
+      categoryAxis.renderer.grid.template.location = 0;
+      categoryAxis.renderer.minGridDistance = 30;
+      categoryAxis.tooltip.disabled = true;
+      categoryAxis.renderer.minHeight = 110;
+      categoryAxis.renderer.grid.template.disabled = true;
+      //categoryAxis.renderer.labels.template.disabled = true;
+      let labelTemplate = categoryAxis.renderer.labels.template;
+      labelTemplate.radius = am4core.percent(-90);
+      labelTemplate.location = 0.5;
+      labelTemplate.relativeRotation = 90;
+      labelTemplate.fontSize = 12;
+      labelTemplate.fontWeight = "bolder";
+
+
+
+      var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+      valueAxis.renderer.grid.template.disabled = true;
+      valueAxis.renderer.labels.template.disabled = true;
+      valueAxis.tooltip.disabled = true;
+
+      // Create series
+      var series = chart.series.push(new am4charts.RadarColumnSeries());
+      series.sequencedInterpolation = true;
+      series.dataFields.valueY = "value";
+      series.dataFields.categoryX = "category";
+      series.columns.template.strokeWidth = 0;
+      series.tooltipText = "{valueY}";
+      series.columns.template.radarColumn.cornerRadius = 10;
+      series.columns.template.radarColumn.innerCornerRadius = 0;
+
+      series.tooltip.pointerOrientation = "vertical";
+
+      // on hover, make corner radiuses bigger
+      let hoverState = series.columns.template.radarColumn.states.create("hover");
+      hoverState.properties.cornerRadius = 0;
+      hoverState.properties.fillOpacity = 1;
+
+
+      series.columns.template.adapter.add("fill", function(fill, target) {
+        return chart.colors.getIndex(target.dataItem.index);
+      })
+
+      // Cursor
+      chart.cursor = new am4charts.RadarCursor();
+      chart.cursor.innerRadius = am4core.percent(50);
+      chart.cursor.lineY.disabled = true;
+
+
+      // HEREEEEEEE
+
+      // Themes begin
+      am4core.useTheme(am4themes_animated);
+      // Themes end
+
+      /* Create chart instance */
+      var chart = am4core.create("day_pop", am4charts.RadarChart);
+      var day_data = []
+      <% Object.keys(days).forEach(function(day){ %>
+      day_data.push({
+        day: "<%= day %>",
+        value: <%= days[day].count %>
+      });
+      <% }) %>
+      /* Add data */
+      chart.data = day_data;
+
+      var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+      categoryAxis.dataFields.category = "day";
+      categoryAxis.tooltip.disabled = true;
+      var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+      valueAxis.extraMin = 0.2;
+      valueAxis.extraMax = 0.2;
+      valueAxis.tooltip.disabled = true;
+
+      /* Create and configure series */
+      var series1 = chart.series.push(new am4charts.RadarSeries());
+      series1.dataFields.valueY = "value";
+      series1.dataFields.categoryX = "day";
+      series1.strokeWidth = 3;
+      series1.tooltipText = "{valueY}";
+      series1.name = "Requests";
+      series1.bullets.create(am4charts.CircleBullet);
+
+
+      //chart.scrollbarX = new am4core.Scrollbar();
+      //chart.scrollbarY = new am4core.Scrollbar();
+
+      chart.cursor = new am4charts.RadarCursor();
+
+      //chart.legend = new am4charts.Legend();
+
+      /// heeeer
+
+      // Themes begin
+      am4core.useTheme(am4themes_animated);
+      // Themes end
+
+      var chart = am4core.create("lng_pop", am4charts.PieChart);
+      chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+      lng_data = [];
+      <% Object.keys(langs).forEach(function(lng){ %>
+      lng_data.push({
+        country: "<%= lng %>",
+        value: <%= langs[lng].count %>
+      });
+      <% }) %>
+      chart.data = lng_data;
+      chart.radius = am4core.percent(70);
+      chart.innerRadius = am4core.percent(40);
+      chart.startAngle = 180;
+      chart.endAngle = 360;
+
+      var series = chart.series.push(new am4charts.PieSeries());
+      series.dataFields.value = "value";
+      series.dataFields.category = "country";
+
+      series.slices.template.cornerRadius = 10;
+      series.slices.template.innerCornerRadius = 7;
+      series.slices.template.draggable = true;
+      series.slices.template.inert = true;
+      series.alignLabels = false;
+
+      series.hiddenState.properties.startAngle = 90;
+      series.hiddenState.properties.endAngle = 90;
+
+      //chart.legend = new am4charts.Legend();
+
+
+      // herrreeeee
+      // Themes begin
+      am4core.useTheme(am4themes_animated);
+      // Themes end
+
+      // Create chart instance
+      var chart = am4core.create("reg_pop", am4charts.XYChart);
+      var req_data = []
+      <% var orderd_date = Object.keys(reqs).sort() %>
+      <% orderd_date.forEach(function(req){ %>
+      req_data.push({
+        date: "<%= req %>",
+        value: <%= reqs[req].count %>
+      });
+      <% }); %>
+      console.log(req_data);
+      chart.data = req_data;
+
+      // Create axes
+      var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+      dateAxis.renderer.grid.template.location = 0;
+      dateAxis.renderer.minGridDistance = 50;
+
+      var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+
+      // Create series
+      var series = chart.series.push(new am4charts.LineSeries());
+      series.dataFields.valueY = "value";
+      series.dataFields.dateX = "date";
+      series.strokeWidth = 3;
+      series.fillOpacity = 0.5;
+
+      // Add vertical scrollbar
+      chart.scrollbarY = new am4core.Scrollbar();
+      chart.scrollbarY.marginLeft = 0;
+
+      // Add cursor
+      chart.cursor = new am4charts.XYCursor();
+      chart.cursor.behavior = "zoomXY";
+      chart.cursor.lineX.disabled = false;
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#example').DataTable({
+        "order": [[ 2, "desc" ]]
+    });
+      });
+    </script>
   </div>
 
 </body>
