@@ -178,8 +178,8 @@
       <% var days ={}; %>
       <% var the_name =""; %>
       <% Object.keys(data).forEach(function(key){ %>
-        key_obj ={cateory:"/<%= key %>"};
-        counter = 0;
+        <% key_obj ={cateory:key}; %>
+        <% counter = 0; %>
 
       <%  data[key].forEach(function(msg){ %>
         //
@@ -223,8 +223,8 @@
       <% } %>//end filter user
 
       <% }); %>//end data[key]
-      key_obj.value = counter;
-    dataa.push(key_obj);
+      <% key_obj.value = counter; %>
+      <%= dataa.push(key_obj); %>
       <% }); %>//end keys
       //alert("");
       tbody_str = ""
