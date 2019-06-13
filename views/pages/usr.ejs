@@ -34,6 +34,9 @@
 <body>
 
   <div class="container">
+    <div class="row">
+    <h2> <i class="fas fa-arrow-circle-left"></i><span id="usr_name"></span></h2>
+    </div>
     hello <%= usr_id %>
     <!-- HTML -->
     <div class="row">
@@ -174,6 +177,7 @@
       <% var langs ={}; %>
       <% var reqs ={}; %>
       <% var days ={}; %>
+      <% var the_name =""; %>
       <% Object.keys(data).forEach(function(key){ %>
       dataa.push({
         category: "/<%= key %>",
@@ -195,6 +199,7 @@
         <%    if (name=="") { %>
           <%    name ="Anonymous"; %>
         <%    } %>
+              <% the_name = name+" ("+msg.from.id+")" %>
       <%      users[msg.from.id] = {name : name, req_count : 1, lang:msg.from.language_code} %>
       <%    } %>
 
@@ -231,6 +236,7 @@
       $("#usr_count").html("<%= Object.keys(users).length %>");
       $("#lng_count").html("<%= Object.keys(langs).length %>");
       $("#req_count").html("<%= Object.keys(dates).length %>");
+      $("#usr_name").html("<%= the_name %>");
       chart.data = dataa;
       chart.radius = am4core.percent(100);
       chart.innerRadius = am4core.percent(50);
