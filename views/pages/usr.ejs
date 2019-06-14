@@ -177,14 +177,13 @@
       <% var reqs ={}; %>
       <% var days ={}; %>
       <% var the_name =""; %>
+      <% var counter = 0; %>
       <% Object.keys(data).forEach(function(key){ %>
-      dataa.push({
-        category: "/<%= key %>",
-        value: <%= data[key].length %>
-      })
+      <% counter = 0; %>
       <%  data[key].forEach(function(msg){ %>
         //
         <%    if (msg.from.id== usr_id) { %>
+          <% counter+=1 %>
       <%    if (users.hasOwnProperty(msg.from.id)) { %>
       <%      users[msg.from.id].req_count +=1; %>
       <%    } else{%>
@@ -222,6 +221,10 @@
       <%= dates.push( moment(msg.date*1000)) %>;
       <% } %>//end filter user
       <% }); %>//end data[key]
+      dataa.push({
+        category: "/<%= key %>",
+        value: <%= counter %>
+      })
       <% }); %>//end keys
       //alert("");
       tbody_str = ""
