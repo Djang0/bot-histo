@@ -5,7 +5,7 @@ const path = require('path')
 var bodyParser = require('body-parser');
 
 const PORT = process.env.PORT || 5000
-//https://lreenaers.ddns.net:8443/UZeLvHozfhwsL53eoAjetEYv
+//https://mister.mr-airspaces.cloud:8443/UZeLvHozfhwsL53eoAjetEYv
 var welcome = function(req, res) {
   res.json({});
 }
@@ -19,13 +19,13 @@ var app = express()
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', async (req, res) => {
-    request('https://lreenaers.ddns.net:8443/UZeLvHozfhwsL53eoAjetEYv', function(error, response, body) {
+    request('https://mister.mr-airspaces.cloud:8443/UZeLvHozfhwsL53eoAjetEYv', function(error, response, body) {
       var data = JSON.parse(body);
       res.render('pages/db', {data:data, moment : moment});
     })})
     .get('/user/:id', async (req, res) => {
       var param_usr_id = req.params.id;
-      request('https://lreenaers.ddns.net:8443/UZeLvHozfhwsL53eoAjetEYv', function(error, response, body) {
+      request('https://mister.mr-airspaces.cloud:8443/UZeLvHozfhwsL53eoAjetEYv', function(error, response, body) {
         var data = JSON.parse(body);
 
         // for (var key in data) {
