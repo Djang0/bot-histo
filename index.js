@@ -50,6 +50,6 @@ var app = express()
       download_direct_oa_file_real_name: filename,
 
     };
-    request.post('http://mids.be/notam/bpc/download_direct_oa.php', {form: formData}).pipe(res);
+    request.post('http://mids.be/fat/download_direct_oa.php', {form: formData}).pipe(res);
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`));
